@@ -38,9 +38,7 @@ defmodule SoferBeWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller,
-        formats: [:html, :json],
-        layouts: [html: SoferBeWeb.Layouts]
+      use Phoenix.Controller, formats: [:html, :json]
 
       use Gettext, backend: SoferBeWeb.Gettext
 
@@ -52,8 +50,7 @@ defmodule SoferBeWeb do
 
   def live_view do
     quote do
-      use Phoenix.LiveView,
-        layout: {SoferBeWeb.Layouts, :app}
+      use Phoenix.LiveView
 
       unquote(html_helpers())
     end
@@ -90,8 +87,9 @@ defmodule SoferBeWeb do
       # Core UI components
       import SoferBeWeb.CoreComponents
 
-      # Shortcut for generating JS commands
+      # Common modules used in templates
       alias Phoenix.LiveView.JS
+      alias SoferBeWeb.Layouts
 
       # Routes generation with the ~p sigil
       unquote(verified_routes())

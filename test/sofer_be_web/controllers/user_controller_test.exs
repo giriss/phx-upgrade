@@ -2,7 +2,6 @@ defmodule SoferBeWeb.UserControllerTest do
   use SoferBeWeb.ConnCase
 
   import SoferBe.AccountsFixtures
-
   alias SoferBe.Accounts.User
 
   @create_attrs %{
@@ -83,6 +82,7 @@ defmodule SoferBeWeb.UserControllerTest do
 
   defp create_user(_) do
     user = user_fixture()
+
     %{user: user}
   end
 end

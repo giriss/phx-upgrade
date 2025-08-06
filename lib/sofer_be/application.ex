@@ -12,8 +12,6 @@ defmodule SoferBe.Application do
       SoferBe.Repo,
       {DNSCluster, query: Application.get_env(:sofer_be, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: SoferBe.PubSub},
-      # Start the Finch HTTP client for sending emails
-      {Finch, name: SoferBe.Finch},
       # Start a worker by calling: SoferBe.Worker.start_link(arg)
       # {SoferBe.Worker, arg},
       # Start to serve requests, typically the last entry

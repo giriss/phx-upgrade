@@ -17,7 +17,7 @@ config :sofer_be, SoferBe.Repo,
 # you can enable the server option below.
 config :sofer_be, SoferBeWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "m8omUf+/+l4lgwvQF4UbvUzxS+YkCQV/ucs4vyDpkvWqHagaCF8mlTSdlDJIGdlF",
+  secret_key_base: "C5uTNGd5OG2YqZ6LGQoitm9WLBMNsl+PRJ42tLlPNO7SzfsclUZDnTWvy2UduwBj",
   server: false
 
 # In test we don't send emails
